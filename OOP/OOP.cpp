@@ -1,7 +1,7 @@
-#include<iostream>
-#include<conio.h>
-
-int main(){
-
-std::cout<<"OOP";
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+    cout << "OOP";
 }
