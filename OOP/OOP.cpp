@@ -3,5 +3,9 @@
 using namespace std;
 int main()
 {
-    cout << "OOP";
+   
+    int a;
+    cout << "enter number"<<" ";
+    cin>>a;
+    
 }
