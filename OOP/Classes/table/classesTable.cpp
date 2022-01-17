@@ -10,6 +10,7 @@ private:
 public:
     void tableInput()
     {
+       
         cout << "enter table num :";
         cin >> n;
     }
