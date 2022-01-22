@@ -3,6 +3,7 @@
 using namespace std;
 int SelectionSort(int arr[], int temp, int iMin, int val);
 void swap(int temp, int i, int arr[], int iMin);
+void display(int result,int val,int arr[]);
 int main()
 {
     int val;
@@ -15,15 +16,8 @@ int main()
         cin >> arr[i];
     }
     int result = SelectionSort(arr, temp, iMin, val);
-    if (result == 1)
-    {
-        cout << "sorted array is : " << endl;
-        for (int k = 0; k < val; k++)
-        {
-            cout << arr[k];
-        }
-    }
-    return 0;
+   display(result,val,arr);
+   return 0;
 }
 
 int SelectionSort(int arr[], int temp, int iMin, int val)
@@ -48,4 +42,14 @@ void swap(int temp, int i, int arr[], int iMin)
     temp = arr[i];
     arr[i] = arr[iMin];
     arr[iMin] = temp;
+}
+void display(int result,int val,int arr[]){
+     if (result == 1)
+    {
+        cout << "sorted array is : " << endl;
+        for (int k = 0; k < val; k++)
+        {
+            cout << arr[k];
+        }
+    }
 }
