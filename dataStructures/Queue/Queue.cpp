@@ -5,32 +5,34 @@ void Insert();
 void Delete();
 void Display();
 
-int Q[10], b = -1, f = -1, n = 9, Null = 0;
+int Q[10], b = -1, f = -1, n = 10, Null = 0;
 void Insert()
 {
     int val;
-    if (b >= n)
+    if (b == n - 1)
     {
         cout << "OverFlow" << endl;
     }
     else
     {
-        b = b + 1;
-        cout << "insert item : ";
+        if (f == -1)
+          
+        cout << "Insert the element in queue : " << endl;
         cin >> val;
+        b++;
         Q[b] = val;
-        f = 0;
+          f = 0;
     }
 }
 void Delete()
 {
-    if (f = -1 && f > b)
+    if (f == -1)
     {
         cout << "underflow" << endl;
     }
     else
     {
-        cout << "Deleted value is" << Q[f];
+        cout << "Deleted value is" << Q[f]<<endl;
         Q[f] == Null;
         f = f + 1;
     }
@@ -51,15 +53,16 @@ void Display()
 }
 int main()
 {
-    int choice;
+    int ch;
     cout << "1: insert an item." << endl;
     cout << "2: delete an item." << endl;
     cout << "3: display an item." << endl;
-    cout << "enter your choice number: ";
-    cin >> choice;
+
     do
     {
-        switch (choice)
+        cout << "enter your choice number: ";
+        cin >> ch;
+        switch (ch)
         {
         case 1:
             Insert();
@@ -70,9 +73,13 @@ int main()
         case 3:
             Display();
             break;
+        case 4:
+            cout << "exit";
+            break;
         default:
             cout << "invalid choice";
         }
-    } while (choice < 4);
+    } while (ch != 4);
     return 0;
 }
+
