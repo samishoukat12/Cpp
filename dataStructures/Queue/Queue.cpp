@@ -16,12 +16,12 @@ void Insert()
     else
     {
         if (f == -1)
-          
-        cout << "Insert the element in queue : " << endl;
+
+            cout << "Insert the element in queue : " << endl;
         cin >> val;
         b++;
         Q[b] = val;
-          f = 0;
+        f = 0;
     }
 }
 void Delete()
@@ -32,7 +32,7 @@ void Delete()
     }
     else
     {
-        cout << "Deleted value is" << Q[f]<<endl;
+        cout << "Deleted value is : " << Q[f] << endl;
         Q[f] == Null;
         f = f + 1;
     }
@@ -82,4 +82,3 @@ int main()
     } while (ch != 4);
     return 0;
 }
-
